@@ -23,3 +23,5 @@ fn spawn_app() {
 
     let _ = tokio::spawn(server);
 }
+
+// todo!("Start polishing! Bookmark for section 3.5.1 as a stopping point.")
