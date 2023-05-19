@@ -1,0 +1,27 @@
+[package]
+name = "gateway4exp"
+version = "0.1.0"
+authors = [
+    "Daniel Furman <djfurman@gmail.com>",
+]
+description = "A central broker service for exploration and testing written in Rust"
+keywords = ["gateway", "async", "http", "actix"]
+repository = "https://github.com/djfurman/gateway4exp-rs.git"
+license = "BSD-3-Clause"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "gateway4exp"
+
+[dependencies]
+actix-web = "4"
+tokio = {version = "1", features = ["macros", "rt-multi-thread"]}
+
+[dev-dependencies]
+reqwest = { version = "0.11", features = ["json", "rustls-tls"]}
